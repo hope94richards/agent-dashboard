@@ -1,0 +1,619 @@
+{
+  "connected": true,
+  "agentStatus": "working",
+  "lastWsEventAt": "10:12:04 AM",
+  "lastEventName": "agent",
+  "tasks": [
+    {
+      "id": "demo-todo-1",
+      "title": "Northwind — refresh sprint backlog",
+      "project": "Northwind",
+      "status": "todo",
+      "priority": 1,
+      "description": "Triage new requests and update priorities.",
+      "updated_at": "2026-02-06T17:40:00.000Z"
+    },
+    {
+      "id": "demo-todo-2",
+      "title": "Atlas — draft onboarding checklist",
+      "project": "Atlas",
+      "status": "todo",
+      "priority": 2,
+      "description": "Create a 5-step onboarding doc for new hires.",
+      "updated_at": "2026-02-06T17:41:00.000Z"
+    },
+    {
+      "id": "demo-todo-3",
+      "title": "Nimbus — fix login edge case",
+      "project": "Nimbus",
+      "status": "todo",
+      "priority": 1,
+      "description": "Handle expired tokens gracefully on refresh.",
+      "updated_at": "2026-02-06T17:42:00.000Z"
+    },
+    {
+      "id": "demo-todo-4",
+      "title": "Beacon — review QA report",
+      "project": "Beacon",
+      "status": "todo",
+      "priority": 3,
+      "description": "Summarize top 5 failures and owners.",
+      "updated_at": "2026-02-06T17:43:00.000Z"
+    },
+    {
+      "id": "demo-blocked-1",
+      "title": "Pioneer — vendor contract review",
+      "project": "Pioneer",
+      "status": "blocked",
+      "priority": 2,
+      "description": "Waiting on legal review notes.",
+      "updated_at": "2026-02-06T17:30:00.000Z"
+    },
+    {
+      "id": "demo-blocked-2",
+      "title": "Harbor — data import access",
+      "project": "Harbor",
+      "status": "blocked",
+      "priority": 3,
+      "description": "Blocked on credentials from partner.",
+      "updated_at": "2026-02-06T17:31:00.000Z"
+    },
+    {
+      "id": "demo-ip-1",
+      "title": "Lumen — redesign settings panel",
+      "project": "Lumen",
+      "status": "in_progress",
+      "priority": 1,
+      "description": "Adjust layout, tighten spacing, improve contrast.",
+      "updated_at": "2026-02-06T18:02:00.000Z"
+    },
+    {
+      "id": "demo-ip-2",
+      "title": "Orbit — realtime status indicators",
+      "project": "Orbit",
+      "status": "in_progress",
+      "priority": 2,
+      "description": "Add presence pings + status timeout.",
+      "updated_at": "2026-02-06T18:03:00.000Z"
+    },
+    {
+      "id": "demo-ip-3",
+      "title": "Quill — analytics export",
+      "project": "Quill",
+      "status": "in_progress",
+      "priority": 2,
+      "description": "CSV export for weekly metrics.",
+      "updated_at": "2026-02-06T18:04:00.000Z"
+    },
+    {
+      "id": "demo-ip-4",
+      "title": "Horizon — upgrade auth flow",
+      "project": "Horizon",
+      "status": "in_progress",
+      "priority": 1,
+      "description": "Implement refresh token rotation.",
+      "updated_at": "2026-02-06T18:05:00.000Z"
+    },
+    {
+      "id": "demo-done-1",
+      "title": "Nova — polish landing page",
+      "project": "Nova",
+      "status": "done",
+      "priority": 2,
+      "description": "Applied typography and spacing updates.",
+      "updated_at": "2026-02-06T16:20:00.000Z"
+    },
+    {
+      "id": "demo-done-2",
+      "title": "Cobalt — add search filters",
+      "project": "Cobalt",
+      "status": "done",
+      "priority": 2,
+      "description": "Added filters + saved presets.",
+      "updated_at": "2026-02-06T16:21:00.000Z"
+    },
+    {
+      "id": "demo-done-3",
+      "title": "Vector — create onboarding flow",
+      "project": "Vector",
+      "status": "done",
+      "priority": 1,
+      "description": "Multi-step onboarding with defaults.",
+      "updated_at": "2026-02-06T16:22:00.000Z"
+    },
+    {
+      "id": "demo-done-4",
+      "title": "Tidal — build alerts list",
+      "project": "Tidal",
+      "status": "done",
+      "priority": 1,
+      "description": "Alerts list with real-time updates.",
+      "updated_at": "2026-02-06T16:23:00.000Z"
+    }
+  ],
+  "deliverables": [
+    {
+      "id": "deliv-1",
+      "title": "Quarterly roadmap brief",
+      "type": "doc",
+      "date": "2026-02-10",
+      "updated_at": "2026-02-06T18:10:00.000Z"
+    },
+    {
+      "id": "deliv-2",
+      "title": "UI polish checklist",
+      "type": "doc",
+      "date": "2026-02-09",
+      "updated_at": "2026-02-06T18:11:00.000Z"
+    },
+    {
+      "id": "deliv-3",
+      "title": "Demo recording",
+      "type": "video",
+      "date": "2026-02-12",
+      "updated_at": "2026-02-06T18:12:00.000Z"
+    },
+    {
+      "id": "deliv-4",
+      "title": "Release notes v1.4",
+      "type": "doc",
+      "date": "2026-02-08",
+      "updated_at": "2026-02-06T18:13:00.000Z"
+    },
+    {
+      "id": "deliv-5",
+      "title": "Integration test report",
+      "type": "report",
+      "date": "2026-02-11",
+      "updated_at": "2026-02-06T18:14:00.000Z"
+    }
+  ],
+  "schedules": [
+    {
+      "id": "sched-1",
+      "title": "Morning triage sweep",
+      "project": "Ops",
+      "run_at": "2026-02-07T16:00:00.000Z"
+    },
+    {
+      "id": "sched-2",
+      "title": "Stakeholder review",
+      "project": "Summit",
+      "run_at": "2026-02-07T19:00:00.000Z"
+    },
+    {
+      "id": "sched-3",
+      "title": "Demo rehearsal",
+      "project": "Orbit",
+      "run_at": "2026-02-07T22:00:00.000Z"
+    },
+    {
+      "id": "sched-4",
+      "title": "Weekly status sync",
+      "project": "Northwind",
+      "run_at": "2026-02-08T18:00:00.000Z"
+    }
+  ],
+  "actionLog": [
+    {
+      "time": "10:12:04 AM",
+      "text": "Agent • Orbit — Updated status indicators"
+    },
+    {
+      "time": "10:11:58 AM",
+      "text": "Agent • Lumen — Polished settings panel"
+    },
+    {
+      "time": "10:11:52 AM",
+      "text": "Agent • Nimbus — Patched login refresh"
+    },
+    {
+      "time": "10:11:46 AM",
+      "text": "Agent • Aurora — Drafted rollout plan"
+    },
+    {
+      "time": "10:11:40 AM",
+      "text": "Agent • Summit — Aligned roadmap themes"
+    },
+    {
+      "time": "10:11:34 AM",
+      "text": "Agent • Vector — Shipped onboarding flow"
+    },
+    {
+      "time": "10:11:28 AM",
+      "text": "Agent • Titan — Completed smoke tests"
+    },
+    {
+      "time": "10:11:22 AM",
+      "text": "Agent • Forge — Outlined demo script"
+    },
+    {
+      "time": "10:11:16 AM",
+      "text": "Agent • Beacon — Reviewed QA report"
+    },
+    {
+      "time": "10:11:10 AM",
+      "text": "Agent • Quill — Started analytics export"
+    },
+    {
+      "time": "10:11:04 AM",
+      "text": "Agent • Cobalt — Added search filters"
+    },
+    {
+      "time": "10:10:58 AM",
+      "text": "Agent • Delta — Updated admin overview"
+    },
+    {
+      "time": "10:10:52 AM",
+      "text": "Agent • Mosaic — Published API docs"
+    },
+    {
+      "time": "10:10:46 AM",
+      "text": "Agent • Cascade — Improved charts"
+    },
+    {
+      "time": "10:10:40 AM",
+      "text": "Agent • Zephyr — Refreshed billing UI"
+    },
+    {
+      "time": "10:10:34 AM",
+      "text": "Agent • Echo — Saved preferences"
+    },
+    {
+      "time": "10:10:28 AM",
+      "text": "Agent • Nova — Polished landing page"
+    },
+    {
+      "time": "10:10:22 AM",
+      "text": "Agent • Harbor — Awaiting partner access"
+    },
+    {
+      "time": "10:10:16 AM",
+      "text": "Agent • Pioneer — Waiting on legal"
+    },
+    {
+      "time": "10:10:10 AM",
+      "text": "Agent • Northwind — Refined backlog"
+    },
+    {
+      "time": "10:10:04 AM",
+      "text": "Agent • Orbit — Updated status indicators"
+    },
+    {
+      "time": "10:09:58 AM",
+      "text": "Agent • Lumen — Polished settings panel"
+    },
+    {
+      "time": "10:09:52 AM",
+      "text": "Agent • Nimbus — Patched login refresh"
+    },
+    {
+      "time": "10:09:46 AM",
+      "text": "Agent • Aurora — Drafted rollout plan"
+    },
+    {
+      "time": "10:09:40 AM",
+      "text": "Agent • Summit — Aligned roadmap themes"
+    },
+    {
+      "time": "10:09:34 AM",
+      "text": "Agent • Vector — Shipped onboarding flow"
+    },
+    {
+      "time": "10:09:28 AM",
+      "text": "Agent • Titan — Completed smoke tests"
+    },
+    {
+      "time": "10:09:22 AM",
+      "text": "Agent • Forge — Outlined demo script"
+    },
+    {
+      "time": "10:09:16 AM",
+      "text": "Agent • Beacon — Reviewed QA report"
+    },
+    {
+      "time": "10:09:10 AM",
+      "text": "Agent • Quill — Started analytics export"
+    },
+    {
+      "time": "10:09:04 AM",
+      "text": "Agent • Cobalt — Added search filters"
+    },
+    {
+      "time": "10:08:58 AM",
+      "text": "Agent • Delta — Updated admin overview"
+    },
+    {
+      "time": "10:08:52 AM",
+      "text": "Agent • Mosaic — Published API docs"
+    },
+    {
+      "time": "10:08:46 AM",
+      "text": "Agent • Cascade — Improved charts"
+    },
+    {
+      "time": "10:08:40 AM",
+      "text": "Agent • Zephyr — Refreshed billing UI"
+    },
+    {
+      "time": "10:08:34 AM",
+      "text": "Agent • Echo — Saved preferences"
+    },
+    {
+      "time": "10:08:28 AM",
+      "text": "Agent • Nova — Polished landing page"
+    },
+    {
+      "time": "10:08:22 AM",
+      "text": "Agent • Harbor — Awaiting partner access"
+    },
+    {
+      "time": "10:08:16 AM",
+      "text": "Agent • Pioneer — Waiting on legal"
+    },
+    {
+      "time": "10:08:10 AM",
+      "text": "Agent • Northwind — Refined backlog"
+    },
+    {
+      "time": "10:08:04 AM",
+      "text": "Agent • Orbit — Updated status indicators"
+    },
+    {
+      "time": "10:07:58 AM",
+      "text": "Agent • Lumen — Polished settings panel"
+    },
+    {
+      "time": "10:07:52 AM",
+      "text": "Agent • Nimbus — Patched login refresh"
+    },
+    {
+      "time": "10:07:46 AM",
+      "text": "Agent • Aurora — Drafted rollout plan"
+    },
+    {
+      "time": "10:07:40 AM",
+      "text": "Agent • Summit — Aligned roadmap themes"
+    },
+    {
+      "time": "10:07:34 AM",
+      "text": "Agent • Vector — Shipped onboarding flow"
+    },
+    {
+      "time": "10:07:28 AM",
+      "text": "Agent • Titan — Completed smoke tests"
+    },
+    {
+      "time": "10:07:22 AM",
+      "text": "Agent • Forge — Outlined demo script"
+    },
+    {
+      "time": "10:07:16 AM",
+      "text": "Agent • Beacon — Reviewed QA report"
+    },
+    {
+      "time": "10:07:10 AM",
+      "text": "Agent • Quill — Started analytics export"
+    },
+    {
+      "time": "10:07:04 AM",
+      "text": "Agent • Cobalt — Added search filters"
+    },
+    {
+      "time": "10:06:58 AM",
+      "text": "Agent • Delta — Updated admin overview"
+    },
+    {
+      "time": "10:06:52 AM",
+      "text": "Agent • Mosaic — Published API docs"
+    },
+    {
+      "time": "10:06:46 AM",
+      "text": "Agent • Cascade — Improved charts"
+    },
+    {
+      "time": "10:06:40 AM",
+      "text": "Agent • Zephyr — Refreshed billing UI"
+    },
+    {
+      "time": "10:06:34 AM",
+      "text": "Agent • Echo — Saved preferences"
+    },
+    {
+      "time": "10:06:28 AM",
+      "text": "Agent • Nova — Polished landing page"
+    },
+    {
+      "time": "10:06:22 AM",
+      "text": "Agent • Harbor — Awaiting partner access"
+    },
+    {
+      "time": "10:06:16 AM",
+      "text": "Agent • Pioneer — Waiting on legal"
+    },
+    {
+      "time": "10:06:10 AM",
+      "text": "Agent • Northwind — Refined backlog"
+    },
+    {
+      "time": "10:06:04 AM",
+      "text": "Agent • Orbit — Updated status indicators"
+    },
+    {
+      "time": "10:05:58 AM",
+      "text": "Agent • Lumen — Polished settings panel"
+    },
+    {
+      "time": "10:05:52 AM",
+      "text": "Agent • Nimbus — Patched login refresh"
+    },
+    {
+      "time": "10:05:46 AM",
+      "text": "Agent • Aurora — Drafted rollout plan"
+    },
+    {
+      "time": "10:05:40 AM",
+      "text": "Agent • Summit — Aligned roadmap themes"
+    },
+    {
+      "time": "10:05:34 AM",
+      "text": "Agent • Vector — Shipped onboarding flow"
+    },
+    {
+      "time": "10:05:28 AM",
+      "text": "Agent • Titan — Completed smoke tests"
+    },
+    {
+      "time": "10:05:22 AM",
+      "text": "Agent • Forge — Outlined demo script"
+    },
+    {
+      "time": "10:05:16 AM",
+      "text": "Agent • Beacon — Reviewed QA report"
+    },
+    {
+      "time": "10:05:10 AM",
+      "text": "Agent • Quill — Started analytics export"
+    },
+    {
+      "time": "10:05:04 AM",
+      "text": "Agent • Cobalt — Added search filters"
+    },
+    {
+      "time": "10:04:58 AM",
+      "text": "Agent • Delta — Updated admin overview"
+    },
+    {
+      "time": "10:04:52 AM",
+      "text": "Agent • Mosaic — Published API docs"
+    },
+    {
+      "time": "10:04:46 AM",
+      "text": "Agent • Cascade — Improved charts"
+    },
+    {
+      "time": "10:04:40 AM",
+      "text": "Agent • Zephyr — Refreshed billing UI"
+    },
+    {
+      "time": "10:04:34 AM",
+      "text": "Agent • Echo — Saved preferences"
+    },
+    {
+      "time": "10:04:28 AM",
+      "text": "Agent • Nova — Polished landing page"
+    },
+    {
+      "time": "10:04:22 AM",
+      "text": "Agent • Harbor — Awaiting partner access"
+    },
+    {
+      "time": "10:04:16 AM",
+      "text": "Agent • Pioneer — Waiting on legal"
+    },
+    {
+      "time": "10:04:10 AM",
+      "text": "Agent • Northwind — Refined backlog"
+    },
+    {
+      "time": "10:04:04 AM",
+      "text": "Agent • Orbit — Updated status indicators"
+    },
+    {
+      "time": "10:03:58 AM",
+      "text": "Agent • Lumen — Polished settings panel"
+    },
+    {
+      "time": "10:03:52 AM",
+      "text": "Agent • Nimbus — Patched login refresh"
+    },
+    {
+      "time": "10:03:46 AM",
+      "text": "Agent • Aurora — Drafted rollout plan"
+    },
+    {
+      "time": "10:03:40 AM",
+      "text": "Agent • Summit — Aligned roadmap themes"
+    },
+    {
+      "time": "10:03:34 AM",
+      "text": "Agent • Vector — Shipped onboarding flow"
+    },
+    {
+      "time": "10:03:28 AM",
+      "text": "Agent • Titan — Completed smoke tests"
+    },
+    {
+      "time": "10:03:22 AM",
+      "text": "Agent • Forge — Outlined demo script"
+    },
+    {
+      "time": "10:03:16 AM",
+      "text": "Agent • Beacon — Reviewed QA report"
+    },
+    {
+      "time": "10:03:10 AM",
+      "text": "Agent • Quill — Started analytics export"
+    },
+    {
+      "time": "10:03:04 AM",
+      "text": "Agent • Cobalt — Added search filters"
+    },
+    {
+      "time": "10:02:58 AM",
+      "text": "Agent • Delta — Updated admin overview"
+    },
+    {
+      "time": "10:02:52 AM",
+      "text": "Agent • Mosaic — Published API docs"
+    },
+    {
+      "time": "10:02:46 AM",
+      "text": "Agent • Cascade — Improved charts"
+    },
+    {
+      "time": "10:02:40 AM",
+      "text": "Agent • Zephyr — Refreshed billing UI"
+    },
+    {
+      "time": "10:02:34 AM",
+      "text": "Agent • Echo — Saved preferences"
+    },
+    {
+      "time": "10:02:28 AM",
+      "text": "Agent • Nova — Polished landing page"
+    },
+    {
+      "time": "10:02:22 AM",
+      "text": "Agent • Harbor — Awaiting partner access"
+    },
+    {
+      "time": "10:02:16 AM",
+      "text": "Agent • Pioneer — Waiting on legal"
+    },
+    {
+      "time": "10:02:10 AM",
+      "text": "Agent • Northwind — Refined backlog"
+    }
+  ],
+  "systemLog": [
+    {
+      "time": "10:12:04 AM",
+      "text": "agent"
+    },
+    {
+      "time": "10:11:59 AM",
+      "text": "presence"
+    }
+  ],
+  "statusLog": [
+    {
+      "time": "10:12:05 AM",
+      "text": "working (agent)"
+    },
+    {
+      "time": "10:11:59 AM",
+      "text": "reading (message)"
+    }
+  ]
+}

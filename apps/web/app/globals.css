@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Avatar system */
+.avatar {
+  position: relative;
+  width: 168px;
+  height: 168px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 30%, #ffd36a, #ff7a59 55%, #2b2f3a 100%);
+  box-shadow: 0 20px 50px rgba(0,0,0,.4), inset 0 0 40px rgba(255,255,255,.08);
+  overflow: hidden;
+}
+
+.avatar-face {
+  font-size: 96px;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,.4));
+}
+
+.avatar-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  border: 2px solid rgba(255,255,255,.12);
+  box-shadow: 0 0 20px rgba(122,92,255,.25);
+}
+
+.avatar-shine {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 60%);
+  transform: translate(-20px,-20px);
+  opacity: .7;
+  pointer-events: none;
+}
+
+.avatar-idle { animation: avatar-breathe 4s ease-in-out infinite; }
+.avatar-reading { animation: avatar-pulse 1.2s ease-in-out infinite; }
+.avatar-working { animation: avatar-rotate 4s linear infinite; }
+.avatar-replied { animation: avatar-pop 0.8s ease-out 1; }
+
+.avatar-working .avatar-ring { animation: ring-spin 2.5s linear infinite; }
+
+@keyframes avatar-breathe {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes avatar-pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+@keyframes avatar-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes ring-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@keyframes avatar-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+html, body { height: 100%; }
