@@ -528,8 +528,10 @@ export default function Home() {
               </h3>
               <div className="relative">
                 <div
-                  className={`space-y-2 min-h-[520px] max-h-[520px] ${
-                    tasksByColumn[col].length > 10 ? "overflow-y-auto pr-1 demo-scroll" : "overflow-hidden"
+                  className={`space-y-2 ${
+                    tasksByColumn[col].length > 10
+                      ? "max-h-[520px] overflow-y-auto pr-1 demo-scroll"
+                      : ""
                   }`}
                 >
                   {tasksByColumn[col].map((t) => (
@@ -621,8 +623,10 @@ export default function Home() {
               </h3>
               <div className="relative">
                 <div
-                  className={`space-y-2 min-h-[520px] max-h-[520px] ${
-                    tasksByColumn[col].length > 10 ? "overflow-y-auto pr-1 demo-scroll" : "overflow-hidden"
+                  className={`space-y-2 ${
+                    tasksByColumn[col].length > 10
+                      ? "max-h-[520px] overflow-y-auto pr-1 demo-scroll"
+                      : ""
                   }`}
                 >
                   {tasksByColumn[col].map((t) => (
