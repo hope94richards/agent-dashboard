@@ -73,3 +73,26 @@
 }
 
 html, body { height: 100%; }
+
+/* Subtle dark scrollbar for task lists */
+.demo-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148,163,184,0.35) transparent;
+}
+
+.demo-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.demo-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.demo-scroll::-webkit-scrollbar-thumb {
+  background: rgba(148,163,184,0.35);
+  border-radius: 999px;
+}
+
+.demo-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(148,163,184,0.55);
+}

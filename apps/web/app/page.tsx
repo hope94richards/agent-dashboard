@@ -527,7 +527,7 @@ export default function Home() {
                 <span className="text-[10px] text-muted/70">{tasksByColumn[col].length}</span>
               </h3>
               <div className="relative">
-                <div className={`space-y-2 ${tasksByColumn[col].length > 10 ? "max-h-[520px] overflow-y-auto pr-1" : ""}`}>
+                <div className="space-y-2 min-h-[520px] max-h-[520px] overflow-y-auto pr-1 demo-scroll">
                   {tasksByColumn[col].map((t) => (
                     <div
                       key={t.id}
@@ -616,7 +616,7 @@ export default function Home() {
                 <span className="text-[10px] text-muted/70">{tasksByColumn[col].length}</span>
               </h3>
               <div className="relative">
-                <div className={`space-y-2 ${tasksByColumn[col].length > 10 ? "max-h-[520px] overflow-y-auto pr-1" : ""}`}>
+                <div className="space-y-2 min-h-[520px] max-h-[520px] overflow-y-auto pr-1 demo-scroll">
                   {tasksByColumn[col].map((t) => (
                     <div
                       key={t.id}
