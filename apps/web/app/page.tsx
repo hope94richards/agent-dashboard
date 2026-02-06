@@ -527,7 +527,11 @@ export default function Home() {
                 <span className="text-[10px] text-muted/70">{tasksByColumn[col].length}</span>
               </h3>
               <div className="relative">
-                <div className="space-y-2 min-h-[520px] max-h-[520px] overflow-y-auto pr-1 demo-scroll">
+                <div
+                  className={`space-y-2 min-h-[520px] max-h-[520px] ${
+                    tasksByColumn[col].length > 10 ? "overflow-y-auto pr-1 demo-scroll" : "overflow-hidden"
+                  }`}
+                >
                   {tasksByColumn[col].map((t) => (
                     <div
                       key={t.id}
@@ -591,7 +595,7 @@ export default function Home() {
                     ))}
                 </div>
                 {tasksByColumn[col].length > 10 && (
-                  <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#0f1115] to-transparent" />
+                  <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#121419] via-[#121419]/60 to-transparent" />
                 )}
               </div>
             </div>
@@ -616,7 +620,11 @@ export default function Home() {
                 <span className="text-[10px] text-muted/70">{tasksByColumn[col].length}</span>
               </h3>
               <div className="relative">
-                <div className="space-y-2 min-h-[520px] max-h-[520px] overflow-y-auto pr-1 demo-scroll">
+                <div
+                  className={`space-y-2 min-h-[520px] max-h-[520px] ${
+                    tasksByColumn[col].length > 10 ? "overflow-y-auto pr-1 demo-scroll" : "overflow-hidden"
+                  }`}
+                >
                   {tasksByColumn[col].map((t) => (
                     <div
                       key={t.id}
@@ -674,7 +682,7 @@ export default function Home() {
                     ))}
                 </div>
                 {tasksByColumn[col].length > 10 && (
-                  <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#0f1115] to-transparent" />
+                  <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#121419] via-[#121419]/60 to-transparent" />
                 )}
               </div>
             </div>
