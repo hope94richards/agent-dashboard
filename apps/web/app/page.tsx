@@ -526,68 +526,73 @@ export default function Home() {
                 </span>
                 <span className="text-[10px] text-muted/70">{tasksByColumn[col].length}</span>
               </h3>
-              <div>
-                {tasksByColumn[col].map((t) => (
-                  <div
-                    key={t.id}
-                    className={`relative overflow-hidden rounded-lg p-2 mb-2 border border-[#222] cursor-pointer hover:border-[#3a404d] ${
-                      col === "todo"
-                        ? "bg-[#17304a]"
-                        : col === "blocked"
-                        ? "bg-[#352a14]"
-                        : "bg-[#352514]"
-                    }`}
-                    onClick={() => setSelectedTask(t)}
-                  >
+              <div className="relative">
+                <div className={`space-y-2 ${tasksByColumn[col].length > 10 ? "max-h-[520px] overflow-y-auto pr-1" : ""}`}>
+                  {tasksByColumn[col].map((t) => (
                     <div
-                      className={`absolute left-0 top-0 h-[2px] w-full ${
+                      key={t.id}
+                      className={`relative overflow-hidden rounded-lg p-2 border border-[#222] cursor-pointer hover:border-[#3a404d] ${
                         col === "todo"
-                          ? "bg-blue-500/80"
+                          ? "bg-[#17304a]"
                           : col === "blocked"
-                          ? "bg-yellow-500/80"
-                          : "bg-orange-400/80"
+                          ? "bg-[#352a14]"
+                          : "bg-[#352514]"
                       }`}
-                    />
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="text-sm">{t.title}</div>
-                      <span className="text-[10px] uppercase px-2 py-0.5 rounded-full border border-[#2a2f38] bg-[#141922] text-slate-300">
-                        {fmtPriority(t.priority)}
-                      </span>
-                    </div>
-                    <div className="mt-1 flex items-center gap-2 text-[11px] text-muted">
-                      {t.project && (
-                        <span className="px-2 py-0.5 rounded-full bg-[#1a1f27] border border-[#222] text-muted text-center leading-tight inline-flex items-center justify-center min-h-[18px]">
-                          {t.project}
-                        </span>
-                      )}
-                      {t.date && <span>Due {t.date}</span>}
-                      {t.updated_at && <span>Updated {fmtDate(t.updated_at)}</span>}
-                    </div>
-                  </div>
-                ))}
-
-                {tasksByColumn[col].length === 0 &&
-                  (showSkeletons ? (
-                    skeletonTasks.map((i) => (
+                      onClick={() => setSelectedTask(t)}
+                    >
                       <div
-                        key={`sk-${col}-${i}`}
-                        className={`bg-panel2 rounded-lg p-2 mb-2 border border-[#222] animate-pulse ${
+                        className={`absolute left-0 top-0 h-[2px] w-full ${
                           col === "todo"
-                            ? "border-l-4 border-l-blue-500"
+                            ? "bg-blue-500/80"
                             : col === "blocked"
-                            ? "border-l-4 border-l-yellow-500"
-                            : "border-l-4 border-l-orange-400"
+                            ? "bg-yellow-500/80"
+                            : "bg-orange-400/80"
                         }`}
-                      >
-                        <div className="h-3 w-3/4 bg-[#1a1f27] rounded mb-2" />
-                        <div className="h-2 w-1/2 bg-[#1a1f27] rounded" />
+                      />
+                      <div className="flex items-center justify-between gap-2">
+                        <div className="text-sm">{t.title}</div>
+                        <span className="text-[10px] uppercase px-2 py-0.5 rounded-full border border-[#2a2f38] bg-[#141922] text-slate-300">
+                          {fmtPriority(t.priority)}
+                        </span>
                       </div>
-                    ))
-                  ) : (
-                    <div className="bg-panel2 rounded-lg p-3 mb-2 border border-[#222] text-xs text-muted">
-                      No items yet.
+                      <div className="mt-1 flex items-center gap-2 text-[11px] text-muted">
+                        {t.project && (
+                          <span className="px-2 py-0.5 rounded-full bg-[#1a1f27] border border-[#222] text-muted text-center leading-tight inline-flex items-center justify-center min-h-[18px]">
+                            {t.project}
+                          </span>
+                        )}
+                        {t.date && <span>Due {t.date}</span>}
+                        {t.updated_at && <span>Updated {fmtDate(t.updated_at)}</span>}
+                      </div>
                     </div>
                   ))}
+
+                  {tasksByColumn[col].length === 0 &&
+                    (showSkeletons ? (
+                      skeletonTasks.map((i) => (
+                        <div
+                          key={`sk-${col}-${i}`}
+                          className={`bg-panel2 rounded-lg p-2 border border-[#222] animate-pulse ${
+                            col === "todo"
+                              ? "border-l-4 border-l-blue-500"
+                              : col === "blocked"
+                              ? "border-l-4 border-l-yellow-500"
+                              : "border-l-4 border-l-orange-400"
+                          }`}
+                        >
+                          <div className="h-3 w-3/4 bg-[#1a1f27] rounded mb-2" />
+                          <div className="h-2 w-1/2 bg-[#1a1f27] rounded" />
+                        </div>
+                      ))
+                    ) : (
+                      <div className="bg-panel2 rounded-lg p-3 border border-[#222] text-xs text-muted">
+                        No items yet.
+                      </div>
+                    ))}
+                </div>
+                {tasksByColumn[col].length > 10 && (
+                  <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#0f1115] to-transparent" />
+                )}
               </div>
             </div>
           ))}
@@ -610,62 +615,67 @@ export default function Home() {
                 </span>
                 <span className="text-[10px] text-muted/70">{tasksByColumn[col].length}</span>
               </h3>
-              <div>
-                {tasksByColumn[col].map((t) => (
-                  <div
-                    key={t.id}
-                    className={`relative overflow-hidden rounded-lg p-2 mb-2 border border-[#222] cursor-pointer hover:border-[#3a404d] ${
-                      col === "done"
-                        ? "bg-[#153021]"
-                        : "bg-[#21232a] opacity-70"
-                    }`}
-                    onClick={() => setSelectedTask(t)}
-                  >
+              <div className="relative">
+                <div className={`space-y-2 ${tasksByColumn[col].length > 10 ? "max-h-[520px] overflow-y-auto pr-1" : ""}`}>
+                  {tasksByColumn[col].map((t) => (
                     <div
-                      className={`absolute left-0 top-0 h-[2px] w-full ${
+                      key={t.id}
+                      className={`relative overflow-hidden rounded-lg p-2 border border-[#222] cursor-pointer hover:border-[#3a404d] ${
                         col === "done"
-                          ? "bg-green-500/80"
-                          : "bg-[#666]"
+                          ? "bg-[#153021]"
+                          : "bg-[#21232a] opacity-70"
                       }`}
-                    />
-                    <div className="flex items-center justify-between gap-2">
-                      <div className="text-sm">{t.title}</div>
-                      <span className="text-[10px] uppercase px-2 py-0.5 rounded-full border border-[#2a2f38] bg-[#141922] text-slate-300">
-                        {fmtPriority(t.priority)}
-                      </span>
-                    </div>
-                    <div className="mt-1 flex items-center gap-2 text-[11px] text-muted">
-                      {t.project && (
-                        <span className="px-2 py-0.5 rounded-full bg-[#1a1f27] border border-[#222] text-muted text-center leading-tight inline-flex items-center justify-center min-h-[18px]">
-                          {t.project}
-                        </span>
-                      )}
-                      {t.date && <span>Due {t.date}</span>}
-                      {t.updated_at && <span>Updated {fmtDate(t.updated_at)}</span>}
-                    </div>
-                  </div>
-                ))}
-
-                {tasksByColumn[col].length === 0 &&
-                  (showSkeletons ? (
-                    skeletonTasks.map((i) => (
+                      onClick={() => setSelectedTask(t)}
+                    >
                       <div
-                        key={`sk-${col}-${i}`}
-                        className={`bg-panel2 rounded-lg p-2 mb-2 border border-[#222] animate-pulse ${
+                        className={`absolute left-0 top-0 h-[2px] w-full ${
                           col === "done"
-                            ? "border-l-4 border-l-green-500"
-                            : "border-l-4 border-l-[#666] opacity-70"
+                            ? "bg-green-500/80"
+                            : "bg-[#666]"
                         }`}
-                      >
-                        <div className="h-3 w-3/4 bg-[#1a1f27] rounded mb-2" />
-                        <div className="h-2 w-1/2 bg-[#1a1f27] rounded" />
+                      />
+                      <div className="flex items-center justify-between gap-2">
+                        <div className="text-sm">{t.title}</div>
+                        <span className="text-[10px] uppercase px-2 py-0.5 rounded-full border border-[#2a2f38] bg-[#141922] text-slate-300">
+                          {fmtPriority(t.priority)}
+                        </span>
                       </div>
-                    ))
-                  ) : (
-                    <div className="bg-panel2 rounded-lg p-3 mb-2 border border-[#222] text-xs text-muted">
-                      No items yet.
+                      <div className="mt-1 flex items-center gap-2 text-[11px] text-muted">
+                        {t.project && (
+                          <span className="px-2 py-0.5 rounded-full bg-[#1a1f27] border border-[#222] text-muted text-center leading-tight inline-flex items-center justify-center min-h-[18px]">
+                            {t.project}
+                          </span>
+                        )}
+                        {t.date && <span>Due {t.date}</span>}
+                        {t.updated_at && <span>Updated {fmtDate(t.updated_at)}</span>}
+                      </div>
                     </div>
                   ))}
+
+                  {tasksByColumn[col].length === 0 &&
+                    (showSkeletons ? (
+                      skeletonTasks.map((i) => (
+                        <div
+                          key={`sk-${col}-${i}`}
+                          className={`bg-panel2 rounded-lg p-2 border border-[#222] animate-pulse ${
+                            col === "done"
+                              ? "border-l-4 border-l-green-500"
+                              : "border-l-4 border-l-[#666] opacity-70"
+                          }`}
+                        >
+                          <div className="h-3 w-3/4 bg-[#1a1f27] rounded mb-2" />
+                          <div className="h-2 w-1/2 bg-[#1a1f27] rounded" />
+                        </div>
+                      ))
+                    ) : (
+                      <div className="bg-panel2 rounded-lg p-3 border border-[#222] text-xs text-muted">
+                        No items yet.
+                      </div>
+                    ))}
+                </div>
+                {tasksByColumn[col].length > 10 && (
+                  <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-[#0f1115] to-transparent" />
+                )}
               </div>
             </div>
           ))}
