@@ -101,6 +101,7 @@ If a user gives this repo to an agent, the agent should be told to:
 4) Always log notable outputs in the Action Log with format:
    "Project — Verb + Output" (e.g., "Aurora — Drafted ingestion spec").
 5) Keep task status accurate: todo → in_progress → done.
+6) Log a Deliverable for every concrete output (docs, plans, screenshots, PRs).
 ```
 
 ---
