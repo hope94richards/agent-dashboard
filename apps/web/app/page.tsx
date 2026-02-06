@@ -530,7 +530,7 @@ export default function Home() {
                 <div
                   className={`space-y-2 ${
                     tasksByColumn[col].length > 10
-                      ? "max-h-[520px] overflow-y-auto pr-1 demo-scroll"
+                      ? "max-h-[740px] overflow-y-auto pr-1 demo-scroll"
                       : ""
                   }`}
                 >
@@ -625,7 +625,7 @@ export default function Home() {
                 <div
                   className={`space-y-2 ${
                     tasksByColumn[col].length > 10
-                      ? "max-h-[520px] overflow-y-auto pr-1 demo-scroll"
+                      ? "max-h-[740px] overflow-y-auto pr-1 demo-scroll"
                       : ""
                   }`}
                 >
