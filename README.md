@@ -1,16 +1,3 @@
-```
-                           _     _____            _     _                      
-     /\                   | |   |  __ \          | |   | |                     
-    /  \   __ _  ___ _ __ | |_  | |  | | __ _ ___| |__ | |__   ___   __ _ _ __ 
-   / /\ \ / _` |/ _ \ '_ \| __| | |  | |/ _` / __| '_ \| '_ \ / _ \ / _` | '__|
-  / ____ \ (_| |  __/ | | | |_  | |__| | (_| \__ \ | | | |_) | (_) | (_| | |   
- /_/ | |\_\__, |\___|_| |_|\__| |_____/ \__,_|___/_| |_|_.__/ \___/ \__,_|_|   
-   __| |   __/ |                                                               
-  / _` |  |___/                                                                
- | (_| |                                                                       
-  \__,_|                                                                       
-```
-
 # Agent Dashboard
 
 A **Kanban-style control room** for AI assistants. Tracks tasks, deliverables, schedules, and activity logs with **automatic status** driven by OpenClaw events. Built for OpenClaw and designed to run behind **Tailscale Serve** at `/agent`.
