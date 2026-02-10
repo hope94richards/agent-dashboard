@@ -25,17 +25,27 @@ A **Kanban-style control room** for AI assistants. Tracks tasks, deliverables, s
 ```bash
 cd agent-dashboard/apps/web
 npm install
-npm run dev -- --port 3000
+npm run dev
 ```
+
+**Custom port** (default is 3000):
+```bash
+# Via environment variable
+PORT=3900 npm run dev
+
+# Or via CLI flag
+npm run dev -- --port 3900
+```
+
 Optional (keep running after shell closes):
 ```bash
-nohup npm run dev -- --port 3000 >/tmp/agent-dashboard-dev.log 2>&1 &
+PORT=3900 nohup npm run dev >/tmp/agent-dashboard-dev.log 2>&1 &
 ```
 
 **Production build (only if you need it):**
 ```bash
 npm run build
-npm run start -- --port 3000
+PORT=3900 npm run start
 ```
 
 ### 2) Ensure basePath is `/agent`
@@ -52,7 +62,7 @@ const nextConfig = {
 tailscale serve reset
 # OpenClaw Gateway UI (18789)
 tailscale serve --bg --set-path / 18789
-# Agent dashboard (Next.js on 3000, basePath /agent)
+# Agent dashboard (Next.js, basePath /agent) — adjust port if changed
 tailscale serve --bg --set-path /agent http://127.0.0.1:3000/agent
 
 tailscale serve status
@@ -95,7 +105,7 @@ openclaw devices approve <requestId>
 If a user gives this repo to an agent, the agent should be told to:
 
 ```
-1) Run the dashboard (npm run dev -- --port 3000) and serve via Tailscale at /agent.
+1) Run the dashboard (npm run dev) and serve via Tailscale at /agent. Use PORT=<port> if 3000 is taken.
 2) Connect to OpenClaw via the UI (Gateway URL + Token + Session Key).
 3) Use the dashboard API for tasks/deliverables/schedules.
 4) Always log notable outputs in the Action Log with format:
